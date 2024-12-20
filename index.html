@@ -12,17 +12,27 @@
     <link rel="stylesheet" href="CSS/styles.css" />
   </head>
   <body>
+
+    
+
+
     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo">
-        <img src="images/sythm.png" alt="Logo Sythm Studio" />
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="games.html">Nos jeux</a></li>
-      </ul>
-    </nav>
+<nav class="navbar">
+  <a href="index.html" target="_blank" class="clickable-link">
+    <div class="logo">
+      <img src="images/SythmStudio.png" alt="Logo Sythm Studio" />
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html" class="active" >Accueil</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="games.html">Nos jeux</a></li>
+  </ul>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">
+    ☰ </button>
+</nav>
+
 
     <!-- Main Container -->
     <div class="container">
@@ -51,6 +61,8 @@
           </p>
           <p> </p>
         </div>
+
+            <!-- Buttons -->
         <div class="buttons">
           <a href="services.html" class="button">Nos Services</a>
           <a href="https://forms.gle/BsdFRgL5A9AatKKUA" class="button secondary"
@@ -62,4 +74,12 @@
       <div class="main-content"></div>
     </div>
   </body>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+  
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </html>
