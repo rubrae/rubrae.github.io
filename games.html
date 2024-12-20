@@ -7,19 +7,22 @@
     <link rel="stylesheet" href="CSS/services.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <a href="index.html" target="_blank" class="clickable-link">
-<div class="logo">
-<img src="images/SythmStudio.png" alt="Logo Sythm Studio" />
-</div>
-</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="games.html" class="active">Nos jeux</a></li>
-      </ul>
-    </nav>
+      <!-- Navbar -->
+<nav class="navbar">
+  <a href="index.html" target="_blank" class="clickable-link">
+    <div class="logo">
+      <img src="images/SythmStudio.png" alt="Logo Sythm Studio" />
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="games.html" class="active">Nos jeux</a></li>
+  </ul>
+  <button class="menu-toggle" aria-label="Ouvrir le menu">
+    ☰ </button>
+</nav>
 
     <div class="studio-container">
       <div class="card2">
@@ -90,7 +93,6 @@
             <a href="https://www.roblox.com/games/9192596365/Find-the-dogs-42" class="button">Jouer</a>
 
         </div>
-
       </div>
 
 
@@ -118,7 +120,32 @@
     <a href="https://www.roblox.com/games/10019720320/Bee-Worker-Tycoon#!/about" class="button">Jouer</a>
 
 </div>
+</div>
 
+ <!-- Chaos Carnival -->
+ <div class="card" style="
+ background-image: url('https://i.ibb.co/cX2jKx5/robloxcard3.png'); 
+ background-size: cover; 
+ background-position: center; 
+ background-repeat: no-repeat;">
+  <div class="logo-text">
+    <div class="logo2">
+      <img
+        src="images/games/chaoscarnival.jpg"
+        alt=" Logo"
+        width="170"
+        height="auto" />
+    </div>
+    </div>
+  <h3C>Chaos Carnival</h3C>
+  <p class="price">300+ <span>Visites</span></p>
+  <p class="label">
+   Des armes wtf, des événements wtf, t'attends quoi pour jouer ?!
+  </p>
+  <div class="buttons">
+    <a href="https://www.roblox.com/games/18229902288/Chaos-Carnival-BETA" class="button">Jouer</a>
+
+</div>
 </div>
 
 
@@ -168,4 +195,12 @@
 
     </div>
   </body>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+  
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 </html>
