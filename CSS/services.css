@@ -35,6 +35,43 @@
   .nav-links a.active {
     background-color: rgb(61, 0, 102);
   }
+
+  /* Bouton menu (pour mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive : Écran max 768px (tablettes et mobiles) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; /* Caché par défaut sur mobile */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #0a0a0a;
+  }
+
+  .nav-links.active {
+    display: flex; /* Affiche le menu quand actif */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
   
   /* styles.css */
   
@@ -281,3 +318,19 @@
     padding: 10px;
   }
   
+  /* Logo image */
+.responsive-logo {
+  max-width: 100%; 
+  width: 400px;
+  height: auto; 
+}
+
+@media screen and (max-width: 768px) {
+  .studio-container {
+    padding: 10px;
+  }
+
+  .responsive-logo {
+    max-width: 80%; 
+}
+}
