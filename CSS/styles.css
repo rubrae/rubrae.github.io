@@ -27,17 +27,17 @@
     width: 100%;
     z-index: 1000;
   }
-  
+
   .navbar .logo img {
     height: 40px;
   }
-  
+
   .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
   }
-  
+
   .nav-links a {
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -45,15 +45,52 @@
     border-radius: 2px;
     transition: background-color 0.3s;
   }
-  
+
   .nav-links a:hover,
   .nav-links a.active {
     background-color: rgb(61, 0, 102);
   }
-  
+
   .nav-links a.active2 {
     background-color: rgb(22, 33, 189);
   }
+
+  /* Bouton menu (pour mobile) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive : Écran max 768px (tablettes et mobiles) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; /* Caché par défaut sur mobile */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #0a0a0a;
+  }
+
+  .nav-links.active {
+    display: flex; /* Affiche le menu quand actif */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
   
   .container {
     flex: 1; /* Assure que le contenu principal remplit l'espace restant */
