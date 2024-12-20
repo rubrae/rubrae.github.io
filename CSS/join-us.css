@@ -1,0 +1,129 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 10px;
+    background-color: #0a0a0a;
+    color: rgb(59, 0, 99);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar .logo img {
+    height: 40px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    background-color: rgb(61, 0, 102);
+  }
+  
+  /* Form */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body,
+  html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+  }
+  
+  .background-image {
+    background-image: url("https://i.ibb.co/nL2hdy0/back2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .form-container {
+    background-color: #eeeeee;
+    height: auto;
+    color: #8000ff;
+    padding: 30px;
+    width: 600px;
+    max-width: 100%;
+    border: 1px solid #8000ff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-container h1 {
+    font-size: 24px;
+    color: #8000ff;
+    margin-bottom: 15px;
+  }
+  
+  .form-container p {
+    font-size: 15px;
+    color: #363636;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    color: #ccc;
+    font-size: 14px;
+  }
+  
+  .title-text {
+    color: #ffffff;
+  }
+  
+  .subtitle-text {
+    color: #ffffff;
+  }
+  
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: #202020;
+    color: #fff;
+    border: 1px solid #1f1f1f;
+    border-radius: 4px;
+    resize: none;
+  }
+  
+  /* Bouton d'envoi stylisé */
+  .submit-button {
+    background-color: transparent;
+    border: 1px solid #8000ff;
+    color: #8000ff;
+    padding: 10px;
+    width: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #8000ff;
+    color: #fff;
+  }
+  
