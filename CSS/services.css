@@ -334,3 +334,63 @@
     max-width: 80%; 
 }
 }
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.nav-links li {
+  position: relative; /* Nécessaire pour positionner le menu déroulant */
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav-links a.active {
+  font-weight: bold;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none; /* Caché par défaut */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1c1b1b;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 2px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #4e0182;
+}
+
+/* Icône du menu déroulant */
+.dropdown-icon {
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
