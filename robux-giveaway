@@ -1,3 +1,13 @@
-<script>
-  window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
-</script>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection...</title>
+  <!-- Redirection automatique après 0 secondes -->
+  <meta http-equiv="refresh" content="0; url=https://www.youtube.com/watch?v=xvFZjo5PgG0" />
+</head>
+<body>
+  <p>Redirection en cours... Si vous n'êtes pas redirigé, <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">cliquez ici</a>.</p>
+</body>
+</html>
