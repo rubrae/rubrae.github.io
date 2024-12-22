@@ -65,7 +65,7 @@
   }
 
   .nav-links.active {
-    display: flex; /* Affiche le menu quand actif */
+    display: flex; 
   }
 
   .nav-links li {
@@ -89,8 +89,8 @@
     background-position: center;
     font-family: Arial, sans-serif;
     color: #fff;
-    margin: 0; /* Supprime les marges par défaut */
-    padding-top: 60px; /* Compense la hauteur de la navbar fixe */
+    margin: 0; 
+    padding-top: 60px;
   }
   
   .pricing-container {
@@ -141,7 +141,7 @@
     border-radius: 5px;
   }
   
-  /* Ligne violette sous le titre "UNE PAGE" */
+  /* Ligne violette sous les titres */
   .card h3 {
     position: relative;
     display: inline-block;
@@ -340,7 +340,7 @@
 }
 
 .nav-links li {
-  position: relative; /* Nécessaire pour positionner le menu déroulant */
+  position: relative;
   margin-left: 20px;
 }
 
@@ -357,7 +357,7 @@
 
 /* Dropdown menu */
 .dropdown-menu {
-  display: none; /* Caché par défaut */
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
