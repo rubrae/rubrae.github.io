@@ -110,20 +110,4 @@
     resize: none;
   }
   
-  /* Bouton d'envoi stylisé */
-  .submit-button {
-    background-color: transparent;
-    border: 1px solid #8000ff;
-    color: #8000ff;
-    padding: 10px;
-    width: 100%;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .submit-button:hover {
-    background-color: #8000ff;
-    color: #fff;
-  }
   
