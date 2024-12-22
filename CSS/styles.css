@@ -65,7 +65,7 @@ font-size: 24px;
 cursor: pointer;
 }
 
-/* Responsive : Écran max 768px (tablettes et mobiles) */
+/* Responsive : Écran max 768px */
 @media screen and (max-width: 768px) {
 .navbar {
   flex-wrap: wrap;
@@ -76,7 +76,7 @@ cursor: pointer;
 }
 
 .nav-links {
-  display: none; /* Caché par défaut sur mobile */
+  display: none;
   flex-direction: column;
   width: 100%;
   text-align: center;
@@ -84,7 +84,7 @@ cursor: pointer;
 }
 
 .nav-links.active {
-  display: flex; /* Affiche le menu quand actif */
+  display: flex; 
 }
 
 .nav-links li {
@@ -93,7 +93,7 @@ cursor: pointer;
 }
 
 .container {
-  flex: 1; /* Assure que le contenu principal remplit l'espace restant */
+  flex: 1; 
   display: flex;
   flex-direction: column;
   margin-top: 70px;
@@ -186,7 +186,7 @@ cursor: pointer;
   text-align: center;
   padding: 20px;
   font-size: 14px;
-  flex-shrink: 0; /* Empêche le pied de page de se réduire */
+  flex-shrink: 0; 
 }
 
 .footer-container {
@@ -236,7 +236,7 @@ cursor: pointer;
   }
 }
 
-/* Responsive Design for Main Content */
+/* Responsive Design */
 @media (min-width: 768px) {
   .container {
     flex-direction: row;
@@ -256,7 +256,7 @@ cursor: pointer;
 }
 
 .nav-links li {
-  position: relative; /* Nécessaire pour positionner le menu déroulant */
+  position: relative;
   margin-left: 20px;
 }
 
@@ -273,7 +273,7 @@ cursor: pointer;
 
 /* Dropdown menu */
 .dropdown-menu {
-  display: none; /* Caché par défaut */
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
