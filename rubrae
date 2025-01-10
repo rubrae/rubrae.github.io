@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rubrae Portfolio</title>
+    <link rel="stylesheet" href="CSS/portfolio.css" />
+  </head>
+  <body>
+     <!-- Navbar -->
+    <nav class="navbar">
+      <a href="https://sythm-studio.fr/" class="clickable-link">
+        <div class="logo">
+          <img src="images/SythmStudio.png" alt="Logo Sythm" />
+        </div>
+      </a>
+    </nav>
+
+
+    <div class="studio-container">
+      <div class="card2">
+        <div class="logo-text">
+          <div class="logo">
+            <img
+              src="https://i.ibb.co/TmM5Yqb/rub2.png"
+              alt="Logo"
+              class="responsive-logo" />
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <div class="pricing-container">
+
+
+        <!-- 1 -->
+        <div class="card" style="
+        background-image: url('https://i.ibb.co/cX2jKx5/robloxcard3.png'); 
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;">
+          <h3C>5+ Years Experience</h3C>
+          <p class="label">
+            With more than 5 years of luau experience on roblox studio, I can help you!
+          </p>
+        </div>
+
+          <!-- 2 -->
+          <div class="card" style="
+          background-image: url('https://i.ibb.co/cX2jKx5/robloxcard3.png'); 
+          background-size: cover; 
+          background-position: center; 
+          background-repeat: no-repeat;">
+            <h3C>80% Satisfied</h3C>
+            <p class="label">
+              Over 80% of my customers are satisfied with my work!
+            </p>
+          </div>
+
+          
+          <!-- 3 -->
+          <div class="card" style="
+          background-image: url('https://i.ibb.co/cX2jKx5/robloxcard3.png'); 
+          background-size: cover; 
+          background-position: center; 
+          background-repeat: no-repeat;">
+            <h3C>200K Unique Players</h3C>
+            <p class="label">
+              During this time, we have brought together and entertained over 200,000 unique players!
+            </p>
+          </div>
+    </div>
+
+
+      <div class="studio-container">
+        <div class="card2">
+          <div class="logo-text">
+            <div class="logo2">
+              <img
+                src="https://i.ibb.co/PZmQsHz/my-games-cartoon.png"
+                alt="MyGames Logo"
+                width="250"
+                height="auto" />
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-container">
+           <!-- FTDs -->
+           <div class="card" style="
+           background-image: url('https://i.ibb.co/cX2jKx5/robloxcard3.png'); 
+           background-size: cover; 
+           background-position: center; 
+           background-repeat: no-repeat;">
+             <div class="logo-text">
+               <div class="logo2">
+                 <img
+                   src="images/games/FTDs.png"
+                   alt="Logo"
+                   width="170"
+                   height="auto" />
+               </div>
+               </div>
+             <h3C>Find The Dogs</h3C>
+             <p class="label">
+              He has lost his brothers and it's almost dinner time, his mother will never forgive him if you don't help him!! It's up to you! Go get his brothers all over town or other world!
+            </p>
+            <div class="buttons">
+              <a href="https://www.roblox.com/games/9192596365/Find-the-dogs-42" target="_blank" class="button">▶</a>
+          
+          </div>
+          </div>
+   
+   
+    <!-- BWT -->
+    <div class="card" style="
+    background-image: url('https://i.ibb.co/cX2jKx5/robloxcard3.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;">
+     <div class="logo-text">
+       <div class="logo2">
+         <img
+           src="images/games/BWT.png"
+           alt=" Logo"
+           width="170"
+           height="auto" />
+       </div>
+       </div>
+     <h3C>Bee Worker Tycoon</h3C>
+     <p class="label">
+      Welcome to the world of beekeeping! In this world you will start with a bee that will forage and produce the best honeycomb! You can then sell your honeycomb to get money or gems to improve your bee and expand your island! More bees, more money!
+Have fun in this wonderful world!
+     </p>
+     <div class="buttons">
+       <a href="https://www.roblox.com/games/10019720320/Bee-Worker-Tycoon#!/about" target="_blank" class="button">▶</a>
+   
+   </div>
+   </div>
+   
+    <!-- Chaos Carnival -->
+    <div class="card" style="
+    background-image: url('https://i.ibb.co/cX2jKx5/robloxcard3.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;">
+     <div class="logo-text">
+       <div class="logo2">
+         <img
+           src="images/games/chaoscarnival.jpg"
+           alt=" Logo"
+           width="170"
+           height="auto" />
+       </div>
+       </div>
+     <h3C>Chaos Carnival</h3C>
+     <p class="label">
+      Welcome to the Carnival of Chaos, in this old roblox style game, you'll have random weapons to fight with and collect as many coins as you can to get even more weapons. But events will happen at regular intervals that could prevent your fight.
+     </p>
+     <div class="buttons">
+       <a href="https://www.roblox.com/games/18229902288/Chaos-Carnival-BETA" target="_blank" class="button">▶</a>
+   
+   </div>
+   </div>
+   
+      
+      </div>
+
+
+    </div>
+ </body>
+</html>
