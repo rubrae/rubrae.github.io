@@ -226,7 +226,7 @@ cursor: pointer;
 /* Responsive Footer Design */
 @media (max-width: 768px) {
   .footer {
-    padding: 15px;
+    padding: 5px;
     font-size: 12px;
   }
 
