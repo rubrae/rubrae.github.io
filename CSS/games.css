@@ -31,10 +31,11 @@
     transition: background-color 0.3s;
   }
   
-  .nav-links a:hover,
-  .nav-links a.active {
-    background-color: rgb(61, 0, 102);
-  }
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: 3px solid #8322c9;
+}
 
   /* Bouton menu (pour mobile) */
 .menu-toggle {
