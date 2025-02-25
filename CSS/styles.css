@@ -135,26 +135,29 @@ cursor: pointer;
   display: inline-block;
   padding: 10px 20px;
   border: 2px solid #8322c9;
-  color: #8322c9;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   text-align: center;
   border-radius: 2px;
+  border-radius: 10px;
+  background-color: #8322c9;
 }
 
 .button:hover {
-  background-color: #8322c9;
+  background-color: #a03aea;
   color: #fff;
 }
 
 .button.secondary {
-  color: #fff;
-  background-color: transparent;
+  color: #000;
+  background-color: #fff;
   border: 2px solid #fff;
+  border-radius: 10px;
 }
 
 .button.secondary:hover {
-  background-color: #fff;
+  background-color: #f4f4f4;
   color: #000;
 }
 
