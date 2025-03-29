@@ -136,6 +136,18 @@
     transition: transform 0.3s;
     box-shadow: 0px 4px 8px rgba(53, 53, 53, 0.349);
   }
+
+.card33 {
+    background-color: #141414;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+    box-shadow: 0px 4px 8px rgba(53, 53, 53, 0.349);
+  }
   
   .statut {
     background-color: #1a1a1a;
