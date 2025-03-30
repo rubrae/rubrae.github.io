@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sythm Studio | Web</title>
+    <link rel="icon" href="favicon.ico" type="images/favicon">
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 10px;
+        padding: 0;
+        background-color: #141414;
+        color: #ffffff;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      h1 {
+        font-size: 6rem;
+        color: #ff6f61;
+      }
+      p {
+        font-size: 1.5rem;
+        margin: 25px;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" target="_blank" class="clickable-link">
+        <div class="logo">
+          <img src="images/SythmStudio.png" alt="Logo Sythm Studio" />
+        </div>
+      </a>
+    </nav>
+
+    <div>
+
+        <div class="studio-container">
+            <div class="card2">
+              <div class="logo-text">
+                <div class="logo">
+                  <img
+                    src="https://i.ibb.co/KjskH0Zd/sadd.png"
+                    alt="Sad"
+                    width="300"
+                    height="auto" />
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <p id="randomMessage">Chargement...</p>
+    </div>
+    <div class="404buttons">
+      <a href="/services.html" class="button">Services Roblox</a>
+      <a href="/index.html" class="button">Accueil
+    </a>
+    </div>
+  </div>
+    </div>
+
+    <script>
+      // Liste des phrases déjantées
+      const messages = [
+        "Euh, les commisions web sont fermée.",
+        "Nuh uh, fermée.",
+
+      ];
+
+      // Choisir une phrase aléatoire
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      const randomMessage = messages[randomIndex];
+
+      // Afficher la phrase dans l'élément HTML
+      document.getElementById("randomMessage").innerText = randomMessage;
+    </script>
+  </body>
+</html>
