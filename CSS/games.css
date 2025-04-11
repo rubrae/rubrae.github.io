@@ -312,7 +312,7 @@
   
   .button {
     display: inline-block;
-    padding: 5px 90px;
+    padding: 8px 90px;
     text-decoration: none;
     font-weight: bold;
     text-align: center;
@@ -320,6 +320,10 @@
     background-color: #335fff;
     border-color: transparent;
     color: #f7f7f8;
+    position: absolute;
+    bottom: 10px;
+    left: 4%;
+    width: 93%;
   }
   
   .button:hover {
