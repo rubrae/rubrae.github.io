@@ -312,18 +312,18 @@
   
   .button {
     display: inline-block;
-    padding: 5px 80px;
-    border: 2px solid #3bbf50;
-    background-color: #3bbf50;
-    color: #fff;
+    padding: 5px 90px;
     text-decoration: none;
     font-weight: bold;
     text-align: center;
-    border-radius: 2px;
+    border-radius: 8px;
+    background-color: #335fff;
+    border-color: transparent;
+    color: #f7f7f8;
   }
   
   .button:hover {
-    background-color: #75e186;
+    background-color: #456dff;
     color: #fff;
   }
   
