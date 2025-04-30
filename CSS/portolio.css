@@ -136,6 +136,18 @@
     transition: transform 0.3s;
     box-shadow: 0px 4px 8px rgba(53, 53, 53, 0.349);
   }
+
+  .cardext {
+    background-color: #141414;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+    box-shadow: 0px 4px 8px rgba(53, 53, 53, 0.349);
+  }
   
   .card33 {
     background-color: #141414;
@@ -316,6 +328,22 @@
     border-radius: 10px;
     background-color: #335fff;
     border-color: transparent;
+    color: #f7f7f8;
+    position: absolute;
+    bottom: 10px;
+    left: 4%;
+    width: 93%;
+  }
+
+  .extand-button {
+    display: inline-block;
+    padding: 6px 90px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #0000;
+    border-color: #fff0;
     color: #f7f7f8;
     position: absolute;
     bottom: 10px;
