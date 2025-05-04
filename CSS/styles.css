@@ -128,8 +128,11 @@ cursor: pointer;
 
 .buttons {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
-  flex-wrap: wrap;
+}
+
 }
 
 .button {
@@ -231,16 +234,6 @@ cursor: pointer;
 
   .main-content {
     width: 70%;
-  }
-
-  .buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .button {
   }
 }
 
