@@ -232,6 +232,16 @@ cursor: pointer;
   .main-content {
     width: 70%;
   }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .button {
+  }
 }
 
 .dropdown-menu.active {
