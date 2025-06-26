@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sythm Studio</title>
+    <link rel="icon" href="Img/favico.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="CSS/nabvar.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <img class="logo" width="36" height="36" src="img/logo.png" alt="Logo Sythm">
+            <ul class="nav-links">
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="index.html#pricing">Tarifs</a></li>
+                <li><a href="games.html">Nos jeux</a></li>
+                <li><a href="https://forms.gle/BsdFRgL5A9AatKKUA">Nous rejoindre</a></li>
+            </ul>
+            <a href="#" style="visibility: hidden;" class="cta-button">Espace Client</a>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-header">
+            <h1>Contactez-nous</h1>
+            <p>Prêt à donner vie à votre projet ? Partagez-nous votre vision et nous vous accompagnerons dans sa réalisation.</p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+            <div class="success-message" id="successMessage">
+                Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+            </div>
+
+            <div class="form-group">
+                <label for="email">Adresse e-mail *</label>
+                <input type="email" id="email" name="email" required placeholder="votre@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="formula">Formule souhaitée *</label>
+                <select id="formula" name="formula" required>
+                    <option value="">Sélectionnez une formule</option>
+                    <option value="SITE VITRINE">SITE VITRINE - 150€ TTC</option>
+                    <option value="REMAKE">REMAKE - 500€ TTC</option>
+                    <option value="REDESIGN">REDESIGN - 300€ TTC</option>
+                    <option value="PERSONNALISÉ">PERSONNALISÉ - Devis sur mesure</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Votre message *</label>
+                <textarea id="message" name="message" required placeholder="Décrivez-nous votre projet, vos besoins spécifiques, vos délais souhaités..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                Envoyer le message
+            </button>
+        </form>
+    </section>
+
+       <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const formula = document.getElementById('formula').value;
+            const message = document.getElementById('message').value;
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi en cours...';
+            
+            const FORMSPREE_ID = 'mzzgkjye'; 
+            
+            const formData = new FormData();
+            formData.append('email', email);
+            formData.append('formula', formula);
+            formData.append('message', message);
+            formData.append('_subject', `Demande ${formula} - Contact de ${email}`);
+            
+            fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    successMessage.style.display = 'block';
+                    successMessage.innerHTML = '✅ Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.';
+                    document.getElementById('contactForm').reset();
+                    
+                    // Masquer le message après 5 secondes
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error('Erreur réseau');
+                }
+            })
+            .catch(error => {
+                successMessage.style.display = 'block';
+                successMessage.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                successMessage.innerHTML = '❌ Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter directement.';
+                
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                    successMessage.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                }, 5000);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Envoyer le message';
+            });
+            
+        });
+
+        // Animation du bouton au survol
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.addEventListener('mouseenter', function() {
+            this.style.background = 'linear-gradient(135deg, #4338ca, #06b6d4);';
+        });
+        
+        submitBtn.addEventListener('mouseleave', function() {
+            if (!this.disabled) {
+                this.style.background = 'linear-gradient(135deg, #4338ca, #06b6d4);';
+            }
+        });
+    </script>
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#pricing">Web</a></li>
+                    <li><a href="#pricing">Programmation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Studio</h3>
+                <ul>
+                    <li><a href="#adn">À propos</a></li>
+                    <li><a href="https://forms.gle/BsdFRgL5A9AatKKUA">Rejoindre</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 - Sythm Studio. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="https://x.com/SythmStudio">𝕏</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sythm Studio | 404</title>
+    <link rel="icon" href="favicon.ico" type="images/favicon">
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/nabvar.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 0;
+        color: #ffffff;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(135deg, #1e1b4b, #0f172a);
+      }
+      h1 {
+        font-size: 6rem;
+        color: #ff6f61;
+      }
+      p {
+        font-size: 1.5rem;
+        margin: 25px;
+      }
+      a {
+        color: #007bff;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+
+   <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <img class="logo" width="46" height="46" src="img/logo.png" alt="Logo Sythm">
+            <ul class="nav-links">
+                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="index.html#pricing">Tarifs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://forms.gle/BsdFRgL5A9AatKKUA">Nous rejoindre</a></li>
+            </ul>
+            <a href="#" style="visibility: hidden;" class="cta-button">Espace Client</a>
+        </div>
+    </nav>
+
+    <div>
+
+        <div class="studio-container">
+            <div class="card2">
+              <div class="logo-text">
+                <div class="logo">
+                  <img
+                    src="img/404error.png"
+                    alt="Ogs GamesLogo"
+                    width="500"
+                    height="auto" />
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <p id="randomMessage">Chargement...</p>
+    </div>
+    <div class="404buttons">
+      <a href="/index.html" class="button" style="background: linear-gradient(135deg, #4338ca, #06b6d4);color: #fff;padding: 1rem 2rem;border-radius: 8px;text-decoration: none;font-weight: 600;display: inline-block;margin-top: 2rem;transition: transform 0.3s ease;">Retourner à l'accueil</a>
+    </div>
+  </div>
+    </div>
+
+    <script>
+      // Liste des phrases
+      const messages = [
+        "Ce niveau n'existe pas encore... ou peut-être qu'il a été supprimé pour cause de bugs.",
+        "Le chaos a frappé, cette page est tombée au combat.",
+        "WTF?! T'as réussi à trouver un bug IRL. Bravo, mais cette page est vide.",
+        "On t’a dit d’aller où ? Pas ici en tout cas.",
+        "Cette page a été téléportée dans une autre dimension. RIP.",
+        "Oups... 404. Encore une victime des événements de Chaos Carnival.",
+        "La page s'est pris un ragequit et ne reviendra pas.",
+        "Perdu ? On n’a rien pour toi ici, retourne farmer des bugs ailleurs.",
+        "Désolé, cette page s’est pris un script buggé.",
+        "C’était censé être ici, mais le RNG en a décidé autrement.",
+        "La page a été kickée pour inactivité.",
+        "Pas de chance, c'était une page limitée. T’as trop attendu.",
+        "Cette page s’est fait voler par un noob en train de camper.",
+        "T’as débloqué une page secrète... qui est vide. GG !",
+        "On ne sait pas par quel chemin vous êtes passés, mais probablement pas le bon.",
+        "La page recherchée est partie farmer des gemmes!",
+        "360 NO SCOPE, mais pas de page ici..",
+        "Oof!",
+        "Le transformer pistol l'a sûrement transformée en licorne...",
+
+      ];
+
+      // Choisir une phrase aléatoire
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      const randomMessage = messages[randomIndex];
+
+      // Afficher la phrase
+      document.getElementById("randomMessage").innerText = randomMessage;
+    </script>
+    
+  </body>
+
+</html>
