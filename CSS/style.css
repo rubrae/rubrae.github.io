@@ -91,12 +91,13 @@
         }
 
         .shape:nth-child(1) {
-            width: 120px;
-            height: 40px;
             top: 5%;
             right: 70%;
             transform: rotate(-15deg);
             animation-delay: 0s;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
         }
 
         .logoshape:nth-child(2) {
@@ -232,14 +233,14 @@
         }
 
         .get-started-btn {
-            background: linear-gradient(135deg, #4338ca, #06b6d4);
+            background: linear-gradient(135deg, #10b981, #10b981);
             color: #fff;
             padding: 1rem 2rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
             display: inline-block;
-            margin-top: 2rem;
+            margin-top: 0.3rem;
             transition: transform 0.3s ease;
         }
 
