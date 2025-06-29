@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sythm Studio</title>
+    <link rel="icon" href="img/favico.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="CSS/nabvar.css">
+    <link rel="stylesheet" href="CSS/dashboard.css">
+    <!-- Référencement SEO -->
+    <meta name="description" content="Sythm Studio est un studio français spécialisé dans la création de sites web modernes, responsives et personnalisés.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Sythm Studio">
+    <meta property="og:title" content="Sythm Studio - Studio Web Indépendant">
+    <meta property="og:description" content="Création de sites web vitrine modernes et sur mesure.">
+    <meta property="og:image" content="https://sythm-studio.fr/img/logo.png">
+    <meta property="og:url" content="https://sythm-studio.fr/">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+   
+     <!-- Menu mobile-->
+  <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+  <nav id="mobileMenu" class="mobile-menu">
+    <div class="mobile-menu-header">
+      <img class="navbar-logo2" src="img/mobile.png" alt="Logo" width="140" />
+      <span id="closeMobileMenu" class="mobile-menu-close">&times;</span>
+    </div>
+    <div class="mobile-menu-bar"></div>
+    <a href="index.html" class="mobile-menu-link"><img src="img/icon-home.png" alt="Accueil" class="mobile-menu-icon"> Accueil</a>
+    <a href="contact.html" class="mobile-menu-link"><img src="img/mail.png" alt="Catalogue" class="mobile-menu-icon"> Contact</a>
+    <a href="games.html" class="mobile-menu-link"><img src="img/icon-games.png" alt="Compte" class="mobile-menu-icon"> Nos jeux</a>
+
+  </nav>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <img class="logo" width="46" height="46" src="img/logo.png" alt="Logo Sythm">
+            <div class="navbar-left">
+                <span id="mobileMenuBtn" class="navbar-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>
+           <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#pricing">Tarifs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://forms.gle/BsdFRgL5A9AatKKUA">Nous rejoindre</a></li>
+            </ul>
+            <a href="#" style="visibility: hidden;" id="clientSpaceBtn" class="cta-button">Espace Client</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">Espace Client</h1>
+            <p class="dashboard-subtitle">Suivez l'avancement de votre demande</p>
+        </div>
+        
+
+        <div id="loadingSection" class="loading">
+            <div class="loading-spinner"></div>
+            <p>Chargement de vos informations...</p>
+        </div>
+
+        <div id="errorSection" class="error-message" style="display: none;">
+            <p>Client introuvable ou données indisponibles.</p>
+        </div>
+
+        <div id="successSection" class="success-message" style="display: none;">
+            <p>✅ Paiement effectué avec succès ! Le téléchargement va commencer.</p>
+        </div>
+
+        <div id="clientSection" style="display: none;">
+            <div class="client-card">
+                <h2 id="clientName" class="client-name"></h2>
+                
+                <div class="project-info">
+                    <div class="info-item">
+                        <div class="info-label">Formule</div>
+                        <div id="clientFormule" class="info-value"></div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-label">Prix</div>
+                        <div id="clientPrix" class="info-value"></div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-label">Statut</div>
+                        <div id="clientStatut" class="info-value"></div>
+                    </div>
+                </div>
+
+                <div id="actionSection"></div>
+                
+            </div>
+                    <a href="index.html" class="back-button">← Retour à l'accueil</a>
+<button id="logoutBtn" class="back-button" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);">
+                Se déconnecter
+            </button>
+        </div>
+    </div>
+
+    <script src="JS/dashboard.js"></script>
+</body>
+</html>
