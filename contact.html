@@ -128,7 +128,7 @@
             .then(response => {
                 if (response.ok) {
                     successMessage.style.display = 'block';
-                    successMessage.innerHTML = '✅ Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais en vous fournissons un ID Clients.';
+                    successMessage.innerHTML = '✅ Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais en vous fournissant votre ID Client.';
                     document.getElementById('contactForm').reset();
                     
                     setTimeout(() => {
@@ -141,7 +141,7 @@
             .catch(error => {
                 successMessage.style.display = 'block';
                 successMessage.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
-                successMessage.innerHTML = '❌ Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter directement à sythm.studio@gmail.com.';
+                successMessage.innerHTML = '❌ Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter directement : sythm.studio@gmail.com.';
                 
                 setTimeout(() => {
                     successMessage.style.display = 'none';
