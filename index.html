@@ -7,21 +7,65 @@
     <link rel="icon" href="img/favico.ico" type="image/x-icon" />
     <link rel="stylesheet" href="CSS/nabvar.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <!-- Référencement SEO -->
+    <meta name="description" content="Sythm Studio est un studio français spécialisé dans la création de sites web modernes, responsives et personnalisés.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Sythm Studio">
+    <meta property="og:title" content="Sythm Studio - Studio Web Indépendant">
+    <meta property="og:description" content="Création de sites web vitrine modernes et sur mesure.">
+    <meta property="og:image" content="https://sythm-studio.fr/img/logo.png">
+    <meta property="og:url" content="https://sythm-studio.fr/">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
+
+     <!-- Menu mobile-->
+  <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+  <nav id="mobileMenu" class="mobile-menu">
+    <div class="mobile-menu-header">
+      <img class="navbar-logo2" src="img/mobile.png" alt="Logo" width="140" />
+      <span id="closeMobileMenu" class="mobile-menu-close">&times;</span>
+    </div>
+    <div class="mobile-menu-bar"></div>
+    <a href="index.html" class="mobile-menu-link"><img src="img/icon-home.png" alt="Accueil" class="mobile-menu-icon"> Accueil</a>
+    <a href="contact.html" class="mobile-menu-link"><img src="img/mail.png" alt="Catalogue" class="mobile-menu-icon"> Contact</a>
+    <a href="games.html" class="mobile-menu-link"><img src="img/icon-games.png" alt="Compte" class="mobile-menu-icon"> Nos jeux</a>
+
+  </nav>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-content">
-            <img class="logo" width="36" height="36" src="img/logo.png" alt="Logo Sythm">
-            <ul class="nav-links">
-                <li><a href="#pricing">Tarifs</a></li>
+            <img class="logo" width="46" height="46" src="img/logo.png" alt="Logo Sythm">
+            <div class="navbar-left">
+                <span id="mobileMenuBtn" class="navbar-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>
+           <ul class="nav-links">
+                <li><a href="index.html#pricing">Tarifs</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="games.html">Nos jeux</a></li>
                 <li><a href="https://forms.gle/BsdFRgL5A9AatKKUA">Nous rejoindre</a></li>
             </ul>
-            <a href="#" style="visibility: hidden;" class="cta-button">Espace Client</a>
+            <a href="#" id="clientSpaceBtn" class="cta-button">Espace Client</a>
         </div>
     </nav>
+
+    <!-- Pop-up de connexion -->
+    <div id="loginModal" class="login-modal">
+        <div class="login-modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2 class="login-title">Espace Client</h2>
+            <form class="login-form" id="loginForm">
+                <input type="text" id="clientId" class="login-input" placeholder="Entrez votre ID client" required>
+                <button type="submit" class="login-btn">Se connecter</button>
+                <div id="errorMessage" class="error-message">ID client invalide</div>
+            </form>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -112,45 +156,59 @@
                 <div class="pricing-card">
                     <div class="card-header">
                         <h3>SITE VITRINE</h3>
-                        <div class="price">150€<span style="font-size: 1rem; color: #94a3b8;">/TTC</span></div>
+                        <div class="price">250€<span style="font-size: 1rem; color: #94a3b8;">/TTC</span></div>
                     </div>
                     <ul class="features-list">
                         <li>1 PAGE</li>
-                        <li>Rendu zip</li>
-                        <li>Compatible avec tout appareil</li>
-                        <li>Personnalisé avec vos choix</li>
-                        <li>Front-End</li>
+                        <li>Design responsive</li>
+                        <li>Compatible mobile/tablette</li>
+                        <li>Personnalisé avec les choix du client</li>
+                        <li>Optimisé pour le chargement rapide</li>
+                        <li>Animations</li>
+                        <li>Formulaires</li>
+                        <li>Rendu format .zip</li>
                     </ul>
+                   
                 </div>
 
                 <div class="pricing-card featured">
                     <div class="card-header">
                         <h3>REMAKE</h3>
-                        <div class="price">500€<span style="font-size: 1rem; color: rgba(255,255,255,0.8);">/TTC</span></div>
+                        <div class="price">800€<span style="font-size: 1rem; color: rgba(255,255,255,0.8);">/TTC</span></div>
                     </div>
                     <div class="card-description">
                         Nous reprenons votre site web et le refaisons selon vos besoins, même si nous devons repartir de zéro.
                     </div>
                     <ul class="features-list">
-                        <li>Rendu zip</li>
-                        <li>Front-End</li>
-                        <li>Back-End</li>
+                        <li>Design UI complet sur mesure</li>
+                        <li>Site multipages possible</li>
+                        <li>Intégration front-end propre</li>
+                        <li>Design responsive</li>
+                        <li>Formulaire(s) + intégration e-mail</li>
+                        <li>Base back-end simple (Formspree, PHP Mail, etc.)</li>
+                        <li>Rendu format .zip</li>
                     </ul>
+                   
                 </div>
 
                 <div class="pricing-card">
                     <div class="card-header">
                         <h3>REDESIGN</h3>
-                        <div class="price">300€<span style="font-size: 1rem; color: #94a3b8;">/TTC</span></div>
+                        <div class="price">600€<span style="font-size: 1rem; color: #94a3b8;">/TTC</span></div>
                     </div>
                     <div class="card-description">
                         Nous reprenons votre site web et en modifions le design, tout en conservant votre structure.
                     </div>
                     <ul class="features-list">
-                        <li>Rendu zip</li>
-                        <li>Front-End</li>
-                        <li>Back-End</li>
+                        <li>Analyse de l’existant</li>
+                        <li>Nouveau design personnalisé</li>
+                        <li>Amélioration de l’UX/UI</li>
+                        <li>Front-end modernisé</li>
+                        <li>Responsive optimisé</li>
+                        <li>Animation & effets visuels</li>
+                        <li>Rendu format .zip</li>
                     </ul>
+                   
                 </div>
 
                 <div class="custom-card">
@@ -180,7 +238,7 @@
                 <ul>
                     <li><a href="#adn">À propos</a></li>
                     <li><a href="https://forms.gle/BsdFRgL5A9AatKKUA">Rejoindre</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://sythm-studio.fr/contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -191,5 +249,6 @@
             </div>
         </div>
     </footer>
+    <script src="JS/navbar.js"></script>
 </body>
 </html>
