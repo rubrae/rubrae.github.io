@@ -97,19 +97,47 @@
             
             const actionSection = document.getElementById('actionSection');
             if (client.statut.toLowerCase() === 'terminé') {
+
+                  // Crée l'iframe responsive
+                const iframeWrapper = document.createElement('div');
+                iframeWrapper.style.position = 'relative';
+                iframeWrapper.style.width = '100%';
+                iframeWrapper.style.paddingBottom = '56.25%';
+                iframeWrapper.style.height = '0';
+                iframeWrapper.style.marginBottom = '20px';
+
+                const iframe = document.createElement('iframe');
+                iframe.src = client.demo;
+                iframe.style.position = 'absolute';
+                iframe.style.top = '0';
+                iframe.style.left = '0';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.border = '0';
+                iframe.allowFullscreen = true;
+
+                const demoButton = document.createElement('a');
+                demoButton.href = client.demo;
+                demoButton.className = 'pay-button';
+                demoButton.textContent = 'Voir la démo complète';
+                demoButton.target = '_blank';
+
                 const payButton = document.createElement('a');
                 payButton.href = client.paylink;
                 payButton.className = 'pay-button';
-                payButton.textContent = 'Payer maintenant';
+                payButton.textContent = 'Payer cette version';
                 payButton.target = '_blank';
                 
                 const payText = document.createElement('p');
                 payText.style.color = '#94a3b8';
                 payText.style.marginTop = '1rem';
-                payText.textContent = 'Votre projet est terminé ! Procédez au paiement pour le télécharger.';
+                payText.textContent = 'Votre projet est terminé ! Vous pouvez voir à quoi il ressemble via l\'aperçu ci-dessous ou en cliquant sur le bouton pour un aperçu complet. S\'il ne vous convient pas, demandez-nous des ajustements par e-mail. Sinon, passez au paiement pour télécharger la version actuelle.';
                 
                 actionSection.appendChild(payText);
+                actionSection.appendChild(demoButton);
                 actionSection.appendChild(payButton);
+                iframeWrapper.appendChild(iframe);
+                actionSection.appendChild(iframeWrapper);
             } else {
                 const statusText = document.createElement('p');
                 statusText.style.color = '#94a3b8';
