@@ -41,19 +41,54 @@
 
   <body>
 
-   <!-- Navbar -->
+
+     <!-- Menu mobile-->
+  <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+  <nav id="mobileMenu" class="mobile-menu">
+    <div class="mobile-menu-header">
+      <img class="navbar-logo2" src="img/mobile.png" alt="Logo" width="140" />
+      <span id="closeMobileMenu" class="mobile-menu-close">&times;</span>
+    </div>
+    <div class="mobile-menu-bar"></div>
+    <a href="index.html" class="mobile-menu-link"><img src="img/icon-home.png" alt="Accueil" class="mobile-menu-icon"> Accueil</a>
+    <a href="contact.html" class="mobile-menu-link"><img src="img/mail.png" alt="Catalogue" class="mobile-menu-icon"> Contact</a>
+    <a href="games.html" class="mobile-menu-link"><img src="img/icon-games.png" alt="Compte" class="mobile-menu-icon"> Nos jeux</a>
+
+  </nav>
+
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-content">
             <img class="logo" width="46" height="46" src="img/logo.png" alt="Logo Sythm">
-            <ul class="nav-links">
-                <li><a href="index.html">Acceuil</a></li>
+            <div class="navbar-left">
+                <span id="mobileMenuBtn" class="navbar-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>
+           <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="index.html#pricing">Tarifs</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="https://forms.gle/BsdFRgL5A9AatKKUA">Nous rejoindre</a></li>
             </ul>
-            <a href="#" style="visibility: hidden;" class="cta-button">Espace Client</a>
+            <a href="#" id="clientSpaceBtn" class="cta-button">Espace Client</a>
         </div>
     </nav>
+
+    <!-- Pop-up de connexion -->
+    <div id="loginModal" class="login-modal">
+        <div class="login-modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2 class="login-title">Espace Client</h2>
+            <form class="login-form" id="loginForm">
+                <input type="text" id="clientId" class="login-input" placeholder="Entrez votre ID client" required>
+                <button type="submit" class="login-btn">Se connecter</button>
+                <div id="errorMessage" class="error-message">ID client invalide</div>
+            </form>
+        </div>
+    </div>
 
     <div>
 
@@ -114,5 +149,5 @@
     </script>
     
   </body>
-
+  <script src="JS/navbar.js"></script>
 </html>
