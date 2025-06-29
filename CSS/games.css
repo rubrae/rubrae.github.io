@@ -44,7 +44,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url("https://github.com/rubrae/rubrae.github.io/blob/main/img/backgame.png?raw=true");
+            background-image: url("https://cdn.discordapp.com/attachments/1233502014877470831/1299107536661774456/image.png?ex=685d04ec&is=685bb36c&hm=92effbbd248cb0e731b2bf39420bc7f3273678145a69fe5c427d8402e0793120&");
             filter: blur(5px);
         }
 
@@ -252,6 +252,17 @@
         /* Responsive */
         @media (max-width: 768px) {
 
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            display: none;
+        }   
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -267,20 +278,20 @@
             }
 
             .game-card:hover {
-                width: 100%;
+                width: 210%;
                 height: 200px;
             }
 
             .game-icon {
-                width: 80px;
-                height: 80px;
+                width: 140px;
+                height: 140px;
                 font-size: 2rem;
             }
 
             .game-card:hover .game-icon {
-                width: 60px;
-                height: 60px;
-                left: 50px;
+                width: 110px;
+                height: 110px;
+                left: 40px;
                 font-size: 1.5rem;
             }
 
