@@ -1,10 +1,10 @@
 {
   "clients": {
-    "CLIENT01": {
-      "nom": "Entreprise ABC",
-      "formule": "REMAKE",
-      "prix": "1200€",
-      "statut": "Terminé",
+    "&8CpR&": {
+      "nom": "Rodolphe Oppenheimer",
+      "formule": "--",
+      "prix": "--€",
+      "statut": "En attente",
       "paylink": "https://payment.example.com/client001",
       "complete": "https://download943.mediafire.com/utxqoixwhubguvY8pPov_ldmXbWWItoTDraG0HuxIDNsio3ykhbl7mFqwGQaDF11ZhE5jaF5h5m0VT4pAyF9uYyi5cjlSwxSnO7jQMhq6vQiSBuTm1m3CZV2oHGN5jI_aRSnn_G_8AP_0eStZPlQ4aUhGEbEv7OAYvRlT1wqN08/gccoy5r63rvvxi0/Scapear+1.0.2.mrpack"
     }
