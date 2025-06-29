@@ -10,6 +10,16 @@
       "demo": "https://sythm-studio.fr/404",
       "paylink": "",
       "complete": ""
+    },
+
+      "SDKADMIN": {
+      "nom": "Marilus Trouillone",
+      "formule": "DETTE",
+      "prix": "1200€",
+      "statut": "Terminé",
+      "demo": "https://sythm-studio.fr/404",
+      "paylink": "",
+      "complete": ""
     }
 
   }
