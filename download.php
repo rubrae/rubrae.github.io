@@ -12,19 +12,24 @@ if (!filter_var($url, FILTER_VALIDATE_URL)) {
 }
 
 $ch = curl_init($url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
-$data = curl_exec($ch);
+curl_setopt_array($ch, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_SSL_VERIFYPEER => false,
+    CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)', 
+]);
 
-if ($data === false) {
+$data = curl_exec($ch);
+$contentType = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
+$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+
+if ($data === false || $httpCode >= 400) {
     http_response_code(500);
-    exit("Erreur lors du téléchargement.");
+    exit("Erreur lors du téléchargement distant.");
 }
 
-$contentType = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
 $filename = basename(parse_url($url, PHP_URL_PATH));
-curl_close($ch);
 
 header('Content-Description: File Transfer');
 header('Content-Type: ' . $contentType);
@@ -36,4 +41,3 @@ header('Expires: 0');
 
 echo $data;
 exit;
-?>
