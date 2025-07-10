@@ -1,43 +1,32 @@
 <?php
 if (!isset($_GET['link'])) {
     http_response_code(400);
-    exit("Paramètre 'link' manquant.");
+    exit("Lien manquant.");
 }
 
-$url = $_GET['link'];
+$url = urldecode($_GET['link']);
+$filename = basename(parse_url($url, PHP_URL_PATH));
 
-if (!filter_var($url, FILTER_VALIDATE_URL)) {
+if (!preg_match('/\.(jpg|jpeg|png|gif|webp)$/i', $filename)) {
     http_response_code(400);
-    exit("URL invalide.");
+    exit("Extension non autorisée.");
 }
 
 $ch = curl_init($url);
-curl_setopt_array($ch, [
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_FOLLOWLOCATION => true,
-    CURLOPT_SSL_VERIFYPEER => false,
-    CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)', 
-]);
-
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 $data = curl_exec($ch);
-$contentType = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
-$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-curl_close($ch);
 
-if ($data === false || $httpCode >= 400) {
+if (!$data) {
     http_response_code(500);
-    exit("Erreur lors du téléchargement distant.");
+    exit("Échec du téléchargement.");
 }
 
-$filename = basename(parse_url($url, PHP_URL_PATH));
+$contentType = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
+curl_close($ch);
 
-header('Content-Description: File Transfer');
-header('Content-Type: ' . $contentType);
-header('Content-Disposition: attachment; filename="' . $filename . '"');
-header('Content-Length: ' . strlen($data));
-header('Cache-Control: must-revalidate');
-header('Pragma: public');
-header('Expires: 0');
-
+header("Content-Type: $contentType");
+header("Content-Disposition: attachment; filename=\"$filename\"");
+header("Content-Length: " . strlen($data));
 echo $data;
 exit;
