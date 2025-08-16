@@ -2,25 +2,6 @@
 
   "clients": {
 
-    "QVSEYD/%": {
-      "nom": "Rodolphe Oppenheimer",
-      "formule": "REDESIGN",
-      "prix": "600€",
-      "statut": "En attente",
-      "demo": "https://sythm-studio.fr/404",
-      "paylink": "",
-      "complete": ""
-    },
-
-      "SDKADMIN": {
-      "nom": "Marilus Trouillone",
-      "formule": "DETTE",
-      "prix": "1200€",
-      "statut": "Terminé",
-      "demo": "https://sythm-studio.fr/404",
-      "paylink": "",
-      "complete": ""
-    }
-
   }
 }
+
