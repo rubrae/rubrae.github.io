@@ -197,6 +197,83 @@ lois, restrictions ou réglementations applicables.</label>
         </div>
     </footer>
     <script src="JS/navbar.js"></script>
+<script>
+const contactForm = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+const successMessage = document.getElementById('successMessage');
+const WARNING_MSG = "⚠️ Votre message n'est pas privé et est visible par Formspree. Si des insultes ou propos racistes sont évoqués, vous serez tenu responsable.";
+
+const FORM_KEY = 'lastContactSent';
+
+const lastSent = localStorage.getItem(FORM_KEY);
+if (lastSent) {
+    const diff = Date.now() - parseInt(lastSent);
+    if (diff < 24 * 60 * 60 * 1000) { 
+        submitBtn.disabled = true;
+        successMessage.style.display = 'block';
+        successMessage.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+        successMessage.innerHTML = `Vous avez déjà envoyé un message dans les dernières 24h.<br>${WARNING_MSG}`;
+    }
+}
+
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const lastSent = localStorage.getItem(FORM_KEY);
+    if (lastSent && (Date.now() - parseInt(lastSent)) < 24 * 60 * 60 * 1000) {
+        alert("Vous ne pouvez envoyer un message qu'une fois toutes les 24h.");
+        return;
+    }
+
+    const email = document.getElementById('email').value;
+    const formula = document.getElementById('formula').value;
+    const message = document.getElementById('message').value;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Envoi en cours...';
+
+    const FORMSPREE_ID = 'mzzgkjye'; 
+
+    const formData = new FormData();
+    formData.append('email', email);
+    formData.append('formula', formula);
+    formData.append('message', message);
+    formData.append('_subject', `Demande ${formula} - Contact de ${email}`);
+
+    fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+        if (response.ok) {
+            localStorage.setItem(FORM_KEY, Date.now());
+            successMessage.style.display = 'block';
+            successMessage.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+            successMessage.innerHTML = `Votre message a été envoyé avec succès !<br>${WARNING_MSG}`;
+            contactForm.reset();
+
+            setTimeout(() => { successMessage.style.display = 'none'; }, 20000);
+        } else {
+            throw new Error('Erreur réseau');
+        }
+    })
+    .catch(error => {
+        successMessage.style.display = 'block';
+        successMessage.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+        successMessage.innerHTML = 'Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter directement : sythm.studio@gmail.com.';
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+            successMessage.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+        }, 5000);
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Envoyer le message';
+    });
+});
+</script>
 </body>
 </html>
+
 
