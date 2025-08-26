@@ -17,238 +17,74 @@
     <meta property="og:url" content="https://sythm-studio.fr/">
     <meta name="twitter:card" content="summary_large_image">
 </head>
+<style>
+.background-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+}
+
+.confirm-modal {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: radial-gradient(circle at 30% 40%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.3) 0%, transparent 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confirm-content {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 18px;
+  padding: 38px 28px;
+  text-align: center;
+  max-width: 35vw;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  font-family: calibri;
+  color: #9bb4dd;
+  box-shadow: 0 8px 40px #000a;
+}
+.confirm-content h2 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+.confirm-content p {
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+}
+
+
+@media (max-width: 900px) {
+.confirm-content {
+     max-width: 90vw;
+}
+}
+
+@keyframes bobY {
+  from { transform: translateY(-6px); }
+  to   { transform: translateY(6px); }
+}
+
+</style>
 <body>
-
-     <!-- Menu mobile-->
-  <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
-  <nav id="mobileMenu" class="mobile-menu">
-    <div class="mobile-menu-header">
-      <img class="navbar-logo2" src="img/mobile.png" alt="Logo" width="140" />
-      <span id="closeMobileMenu" class="mobile-menu-close">&times;</span>
+  <div class="confirm-modal">
+    <div class="confirm-content">
+      <img src="img/logo.png" style="animation: bobY 6s cubic-bezier(.79,.14,.15,.86) infinite alternate;animation-delay: 2s;" width="90">
+      <h1 style="font-size: 2.6rem;margin-bottom: 1rem;background: linear-gradient(35deg, #eee, #bebebe);background-clip: border-box;background-clip: border-box;-webkit-background-clip: text;-webkit-text-fill-color: transparent;">Sythm <span>Studio</span></h1>
+      
+      <p>Nous reviendrons !</p>
+      <p>Nous mettons fin à nos services web afin de concentrer nos ressources sur le développement de nos propres projets et plateformes en ligne.
+Cette nouvelle orientation nous permettra d’innover davantage et de proposer des expériences uniques.</p>
     </div>
-    <div class="mobile-menu-bar"></div>
-    <a href="index.html" class="mobile-menu-link"><img src="img/icon-home.png" alt="Accueil" class="mobile-menu-icon"> Accueil</a>
-    <a href="contact.html" class="mobile-menu-link"><img src="img/mail.png" alt="Catalogue" class="mobile-menu-icon"> Contact</a>
-    <a href="games.html" class="mobile-menu-link"><img src="img/icon-games.png" alt="Compte" class="mobile-menu-icon"> Nos jeux</a>
-
-  </nav>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <img class="logo" width="46" height="46" src="img/logo.png" alt="Logo Sythm">
-            <div class="navbar-left">
-                <span id="mobileMenuBtn" class="navbar-hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
-        </div>
-           <ul class="nav-links">
-                <li><a href="index.html#pricing">Tarifs</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="games.html">Nos jeux</a></li>
-                <li><a href="https://forms.gle/BsdFRgL5A9AatKKUA">Nous rejoindre</a></li>
-            </ul>
-            <a href="#" id="clientSpaceBtn" class="cta-button">Espace Client</a>
-        </div>
-    </nav>
-
-    <!-- Pop-up de connexion -->
-    <div id="loginModal" class="login-modal">
-        <div class="login-modal-content">
-            <span class="close-btn" id="closeModal">&times;</span>
-            <h2 class="login-title">Espace Client</h2>
-            <form class="login-form" id="loginForm">
-                <input type="text" id="clientId" class="login-input" placeholder="Entrez votre ID client" required>
-                <button type="submit" class="login-btn">Se connecter</button>
-                <div id="errorMessage" class="error-message">ID client invalide</div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Sythm<br><span style="color: #94a3b8;">Studio</span></h1>
-                <p class="subtitle">Nous sommes un studio français indépendant et nous nous efforçons d'offrir le meilleur de nous-mêmes dans chacun de nos projets.</p>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-shapes">
-                    <div class="shape"></div>
-                    <img class="logoshape" width="96" height="96" alt="bulk photo editing" src="/img/dynamic.png">
-                    <div class="shape"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section ADN -->
-    <section id="adn" class="section" style="background: #0f172a; color: white; text-align: center; padding: 4rem 3rem;">
-        <div style="font-size: 3rem; font-weight: 800; margin-bottom: 3rem;">Notre ADN</div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 3rem; max-width: 1000px; margin: 0 auto;">
-            <div>
-                <img src="img/hit.png" height="40" width="40">
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Défi</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5;">Nous sommes prêts à affronter les plus grands défis et les rendre sûrs et stables.</p>
-            </div>
-            <div>
-                <img src="img/lock.png" height="40" width="40">
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Sécurité</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5;">Nous accordons la priorité à votre sécurité et vos données. Les paiements sont sécurisés et vos données sont correctement protégées.</p>
-            </div>
-            <div>
-                <img src="img/back.png" height="40" width="40">
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Retours</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5;">Nous acceptons volontiers les commentaires sur notre travail et sommes prêts à le corriger.</p>
-            </div>
-            <div>
-                <img src="img/mail.png" height="40" width="40">
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 1rem;">Assistance</h3>
-                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.5;">Vos questions sont les bienvenues et nous sommes prêts à y répondre.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Specialisation Section -->
-    <section class="specialisation">
-        <div class="section">
-            <h2>Spécialisation</h2>
-            <p class="specialisation-subtitle"></p>
-            
-            <div class="specialisation-grid">
-                <div class="specialisation-card">
-                    <img src="/img/code.png" alt="bulk photo editing" width="256" height="256">
-                    <h3>Programmation</h3>
-                    <p>Les lignes de code font partie de nous (JavaScript, JSON, ReactJS).</p>
-                </div>
-                
-                <div class="specialisation-card">
-                    <img src="/img/web.png" alt="bulk photo editing" width="256" height="256">
-                    <h3>Design web</h3>
-                    <p>Nous savons tout ce dont vous avez besoin pour un site magnifique.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-        <!-- VSCode Section -->
-    <section class="vscode-section">
-        <div class="vscode-bg"></div>
-        <img class="vshape" width="96" height="96" alt="bulk photo editing" src="/img/vscode.png">
-        <div class="vscode-content">
-            <h2>Notre outil favori ?</h2>
-            <h1>Visual Studio<br>Code</h1>
-            <p>L'ensemble de votre projet est développé avec cet outil.</p>
-        </div>
-    </section>
-
-
-      <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="section">
-            <h2>Tarifs</h2>
-            <p class="pricing-subtitle">Parlons de sujets qui fâchent</p>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="card-header">
-                        <h3>SITE VITRINE</h3>
-                        <div class="price">250€<span style="font-size: 1rem; color: #94a3b8;">/TTC</span></div>
-                    </div>
-                    <ul class="features-list">
-                        <li>1 PAGE</li>
-                        <li>Design responsive</li>
-                        <li>Compatible mobile/tablette</li>
-                        <li>Personnalisé avec les choix du client</li>
-                        <li>Optimisé pour le chargement rapide</li>
-                        <li>Animations</li>
-                        <li>Formulaires</li>
-                        <li>Rendu format .zip</li>
-                    </ul>
-                   
-                </div>
-
-                <div class="pricing-card featured">
-                    <div class="card-header">
-                        <h3>REMAKE</h3>
-                        <div class="price">800€<span style="font-size: 1rem; color: rgba(255,255,255,0.8);">/TTC</span></div>
-                    </div>
-                    <div class="card-description">
-                        Nous reprenons votre site web et le refaisons selon vos besoins, même si nous devons repartir de zéro.
-                    </div>
-                    <ul class="features-list">
-                        <li>Design UI complet sur mesure</li>
-                        <li>Site multipages possible</li>
-                        <li>Intégration front-end propre</li>
-                        <li>Design responsive</li>
-                        <li>Formulaire(s) + intégration e-mail</li>
-                        <li>Base back-end simple (Formspree, PHP Mail, etc.)</li>
-                        <li>Rendu format .zip</li>
-                    </ul>
-                   
-                </div>
-
-                <div class="pricing-card">
-                    <div class="card-header">
-                        <h3>REDESIGN</h3>
-                        <div class="price">600€<span style="font-size: 1rem; color: #94a3b8;">/TTC</span></div>
-                    </div>
-                    <div class="card-description">
-                        Nous reprenons votre site web et en modifions le design, tout en conservant votre structure.
-                    </div>
-                    <ul class="features-list">
-                        <li>Analyse de l’existant</li>
-                        <li>Nouveau design personnalisé</li>
-                        <li>Amélioration de l’UX/UI</li>
-                        <li>Front-end modernisé</li>
-                        <li>Responsive optimisé</li>
-                        <li>Animation & effets visuels</li>
-                        <li>Rendu format .zip</li>
-                    </ul>
-                   
-                </div>
-
-                <div class="custom-card">
-                    <h3 style="margin-bottom: 1rem; color: #e2e8f0;">PERSONNALISÉ</h3>
-                    <p style="color: #94a3b8;">Dites-nous quelle est votre vision.</p>
-                </div>
-            </div>
-
-            <div style="text-align: center;">
-                <a href="contact.html" class="get-started-btn">Contactez-nous</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#pricing">Web</a></li>
-                    <li><a href="#pricing">Programmation</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Studio</h3>
-                <ul>
-                    <li><a href="#adn">À propos</a></li>
-                    <li><a href="https://forms.gle/BsdFRgL5A9AatKKUA">Rejoindre</a></li>
-                    <li><a href="https://sythm-studio.fr/contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 - Sythm Studio. Tous droits réservés.</p>
-            <div class="social-links">
-                <a href="https://x.com/SythmStudio">𝕏</a>
-            </div>
-        </div>
-    </footer>
-    <script src="JS/navbar.js"></script>
+  </div>
+  <div class="background-overlay"></div>
 </body>
+<script>  console.log("%c Merci aux salopes de rageux [@energylaser, @addfloyymenor, @slenkaa] qui ont spam comme des petits jaloux ♡", "color:#ff4da6;font-weight:bold;font-size:14px;");</script>
 </html>
